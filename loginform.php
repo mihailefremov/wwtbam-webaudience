@@ -42,13 +42,13 @@
 				include_once('datalayer.php');
 				
 				if ($_SESSION["Usertype_wwtbam-audiencevote"]!='admin') {
-					if (checkifuseractive($_SESSION["Username_wwtbam-audiencevote"],2,1)){
-						echo '<div class="alert alert-danger">  <strong>Error!</strong> User already logged in. Choose a different user.</div>';
-					} else{
+					// if (checkifuseractive($_SESSION["Username_wwtbam-audiencevote"],2,1)){
+						// echo '<div class="alert alert-danger">  <strong>Error!</strong> User already logged in. Choose a different user.</div>';
+					// } else{
 						insertlastaction();		
 						echo '<div class="alert alert-success"><strong>Success!</strong> Indicates a successful or positive action. </div>';			
 						header("location:index.php");		
-					}					
+					//}					
 				} else {
 					header("location:index.php");	
 				}			
