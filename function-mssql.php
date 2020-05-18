@@ -1,14 +1,18 @@
 <?php
 function makeconnection()
 {
-	$cn=sqlsrv_connect("localhost","root","P@ssw0rd","wwtbam");
-	sqlsrv_set_charset($cn,"utf8mb4");
-
-	if(sqlsrv_connect_errno())
-	{
-		echo "failed to connect to mysqli:".sqlsrv_connect_error();
+	$serverName = "IDEA-PC\\SQLEXPRESS02"; 
+	
+	$connectionInfo = array( "Database"=>"wwtbam");
+	$conn = sqlsrv_connect( $serverName, $connectionInfo);
+		
+	if( $conn ) {
+		 //echo "Connection established.<br />";
+	}else{
+		 echo "Connection could not be established.<br />";
+		 die( print_r( sqlsrv_errors(), true));
 	}
-	return $cn;
+	return $conn;
 }
 
 ?>

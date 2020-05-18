@@ -1,1 +1,3 @@
-<?php include_once('function-mssql.php'); ?>
+<?php 
+	include_once('function-mssql.php');
+?>
