@@ -125,16 +125,7 @@
 		  </thead>
 		  <tbody>";
 
-	   while($data=mysqli_fetch_array($result))
-      	{
-		 
-		  echo "
-			<tr>
-			  <th scope='row'>$data[0]</th>
-			  <td>$data[1]</td>
-			</tr>
-			";
-      	}
+	   echo $result;
 
 		echo "
 		  </tbody>
