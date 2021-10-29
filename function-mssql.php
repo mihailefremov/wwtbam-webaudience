@@ -1,7 +1,7 @@
 <?php
 function makeconnection()
 {
-	$serverName = "IDEA-PC\\SQLEXPRESS02"; 
+	$serverName = "IDEA-PC\\SQLEXPRESS01"; 
 	
 	$connectionInfo = array( "Database"=>"wwtbam");
 	$conn = sqlsrv_connect( $serverName, $connectionInfo);
